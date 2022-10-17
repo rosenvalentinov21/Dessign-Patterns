@@ -7,7 +7,7 @@ public abstract class Person {
 
     final int age;
 
-    protected Person(final String firstName,final String lastName,final int age) {
+    protected Person(final String firstName, final String lastName, final int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
