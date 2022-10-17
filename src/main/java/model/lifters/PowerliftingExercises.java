@@ -1,10 +1,19 @@
 package model.lifters;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class PowerliftingExercises implements Lifts {
 
-    int squatPR;
-    int benchPR;
-    int deadliftPR;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private int squatPR;
+    private int benchPR;
+    private int deadliftPR;
 
     public PowerliftingExercises(final int squatPR, final int benchPR, final int deadliftPR) {
         this.squatPR = squatPR;

@@ -1,12 +1,24 @@
 package model.lifters;
 
+import javax.persistence.*;
+
+@Entity
 public class Powerlifter extends Lifter {
 
-    private final PowerliftingExercises powerliftingExercises = new PowerliftingExercises();
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @OneToOne
+    private PowerliftingExercises powerliftingExercises;
 
 
     public Powerlifter(final String firstName, final String lastName, final int age, final int weight, final int height) {
         super(firstName, lastName, age, weight, height);
+    }
+
+    public Powerlifter() {
+        super();
     }
 
     public void setSquatPR(final int squatPR) {
