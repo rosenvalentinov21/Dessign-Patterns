@@ -4,14 +4,18 @@ import model.Person;
 
 public class Lifter extends Person {
 
-    int weight;
+    private int weight;
 
-    int height;
+    private int height;
 
     public Lifter(final String firstName, final String lastName, final int age, final int weight, final int height) {
         super(firstName, lastName, age);
         this.weight = weight;
         this.height = height;
+    }
+
+    public Lifter() {
+
     }
 
     public int getWeight() {
