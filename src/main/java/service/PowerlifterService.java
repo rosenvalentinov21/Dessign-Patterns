@@ -2,16 +2,13 @@ package service;
 
 import exception.NonExistingEntityException;
 import model.lifters.Powerlifter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import repository.PowerlifterRepository;
 
 @Service
 public class PowerlifterService {
-
     private final PowerlifterRepository powerlifterRepository;
 
-    @Autowired
     public PowerlifterService(final PowerlifterRepository powerlifterRepository) {
         this.powerlifterRepository = powerlifterRepository;
     }
