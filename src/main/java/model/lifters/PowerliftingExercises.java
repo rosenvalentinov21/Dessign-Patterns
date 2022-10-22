@@ -15,17 +15,12 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Getter
 @Setter
-public class PowerliftingExercises implements Lifts {
+public class PowerliftingExercises {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private int squatPR;
-    private int benchPR;
-    private int deadliftPR;
-
-    @Override
-    public int getTotal() {
-        return squatPR + benchPR + deadliftPR;
-    }
+    private double squatPR;
+    private double benchPR;
+    private double deadliftPR;
 }

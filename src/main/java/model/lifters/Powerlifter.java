@@ -1,8 +1,17 @@
 package model.lifters;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
 public class Powerlifter extends Lifter {
 
     @Id
@@ -12,40 +21,7 @@ public class Powerlifter extends Lifter {
     @OneToOne
     private PowerliftingExercises powerliftingExercises;
 
-
     public Powerlifter(final String firstName, final String lastName, final int age, final int weight, final int height) {
         super(firstName, lastName, age, weight, height);
-    }
-
-    public Powerlifter() {
-        super();
-    }
-
-    public void setSquatPR(final int squatPR) {
-        powerliftingExercises.setSquatPR(squatPR);
-    }
-
-    public int getSquatPR() {
-        return powerliftingExercises.getSquatPR();
-    }
-
-    public void setBenchPR(final int benchPR) {
-        powerliftingExercises.setBenchPR(benchPR);
-    }
-
-    public int getBenchPR() {
-        return powerliftingExercises.getBenchPR();
-    }
-
-    public void setDeadliftPR(final int deadliftPR) {
-        powerliftingExercises.setDeadliftPR(deadliftPR);
-    }
-
-    public int getDeadliftPR() {
-        return powerliftingExercises.getDeadliftPR();
-    }
-
-    public int getTotal() {
-        return powerliftingExercises.getTotal();
     }
 }
