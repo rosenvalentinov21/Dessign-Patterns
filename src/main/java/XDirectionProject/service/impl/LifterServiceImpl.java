@@ -29,7 +29,9 @@ public class LifterServiceImpl implements LifterService {
     }
 
     @Override
-    public void deleteLifter(Lifter lifter) {
-        lifterRepository.delete(lifter);
+    public void deleteLifter(String email) {
+        Lifter lifterToBeDeleted = lifterRepository.findLifterByEmail(email)
+                .orElseThrow(() -> new NonExistingEntityException(NON_EXISTING_ENTITY));
+        lifterRepository.delete(lifterToBeDeleted);
     }
 }

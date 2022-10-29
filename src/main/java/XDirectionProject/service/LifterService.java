@@ -7,5 +7,5 @@ public interface LifterService {
 
     Lifter findLifterByEmail(final String email);
 
-    void deleteLifter(final Lifter lifter);
+    void deleteLifter(final String lifter);
 }
