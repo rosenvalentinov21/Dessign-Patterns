@@ -1,5 +1,5 @@
 package XDirectionProject.model;
 
 public enum BodyParts {
-    PUSH, PULL, LEGS
+    CORE, ARMS, BACK, CHEST, LEGS, SHOULDERS, FULL_BODY, OTHER, OLYMPIC, CARDIO
 }

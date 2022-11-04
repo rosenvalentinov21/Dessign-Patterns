@@ -11,6 +11,7 @@ import java.util.Optional;
 @Repository
 public interface LifterRepository extends JpaRepository<Lifter, Long> {
 
-    @Query(value = "SELECT * FROM lifter as l WHERE l.email=:email;", nativeQuery = true)
+    @Query(value = "SELECT * FROM lifter as l WHERE l.email=:email", nativeQuery = true)
     Optional<Lifter> findLifterByEmail(String email);
+    boolean existsLifterByEmail(String email);
 }

@@ -1,9 +1,9 @@
 package XDirectionProject.model.lifters;
 
+import XDirectionProject.model.Person;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import XDirectionProject.model.Person;
 
 import javax.persistence.*;
 import java.util.List;
