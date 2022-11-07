@@ -4,19 +4,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
+import java.time.LocalDateTime;
 
-@NoArgsConstructor
 @Getter
 @Setter
-public class WorkoutDTO {
-    private int numberOfWorkout;
-
+@NoArgsConstructor
+public class WorkoutCriteriaDTO {
     private String name;
 
-    private List<ExerciseDTO> exercises;
-
     private String description;
+
+    private LocalDateTime date;
+
+    private String exerciseName;
 
     private double weightMoved;
 

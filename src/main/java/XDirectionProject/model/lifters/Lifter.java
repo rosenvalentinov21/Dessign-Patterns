@@ -14,7 +14,6 @@ import java.util.List;
 @Table(name = "lifter")
 @Entity
 public class Lifter extends Person {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")

@@ -19,8 +19,6 @@ public class TrainingLog {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     @ManyToOne
-    private Lifter lifter;
-    @ManyToOne
     private Exercise exercise;
     private int Sets;
     private int Reps;
