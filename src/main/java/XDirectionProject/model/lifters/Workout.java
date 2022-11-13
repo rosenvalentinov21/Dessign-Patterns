@@ -41,4 +41,7 @@ public class Workout {
 
     @Column(name = "personal_records")
     private int personalRecords;
+
+    @Column(name = "workout_number")
+    private int numberOfWorkout;
 }

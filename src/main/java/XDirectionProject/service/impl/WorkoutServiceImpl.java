@@ -101,7 +101,7 @@ public class WorkoutServiceImpl implements WorkoutService {
         List<TrainingLog> trainingLogs = new ArrayList<>();
         exercisesDTO.forEach(exercise -> {
             Exercise foundExercise = exerciseRepository
-                    .findExerciseByEmail(String.valueOf(Objects.hash(exercise.getName(), exercise.getBodyPart())))
+                    .findExerciseById(String.valueOf(Objects.hash(exercise.getName(), exercise.getBodyPart())))
                     .orElse(exerciseRepository.save(
                             new Exercise(String.valueOf(
                                     Objects.hash(exercise.getName(), exercise.getBodyPart(), exercise.getCategory())),

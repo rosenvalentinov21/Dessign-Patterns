@@ -9,5 +9,5 @@ import java.util.Optional;
 public interface ExerciseRepository extends JpaRepository<Exercise, Long> {
 
     @Query(value = "SELECT * FROM exercise as e WHERE e.id=:id", nativeQuery = true)
-    Optional<Exercise> findExerciseByEmail(String id);
+    Optional<Exercise> findExerciseById(String id);
 }

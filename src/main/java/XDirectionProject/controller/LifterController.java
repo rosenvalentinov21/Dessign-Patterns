@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/lifter")
+@RequestMapping("/lifter")
 public class LifterController {
 
     private ModelMapper modelMapper;
@@ -33,7 +33,7 @@ public class LifterController {
     }
 
     @PostMapping("/update-lifter-details/{email}")
-    public ResponseEntity<LifterDTO> saveLifter(@PathVariable(name = "email") String email, @RequestBody LifterDTO newLifterDetails) {
+    public ResponseEntity<LifterDTO> updateLifter(@PathVariable(name = "email") String email, @RequestBody LifterDTO newLifterDetails) {
         Lifter updatedLifter = lifterService.updateLifter(email, newLifterDetails);
         return ResponseEntity.ok(modelMapper.map(updatedLifter, LifterDTO.class));
     }

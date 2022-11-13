@@ -1,7 +1,6 @@
 package XDirectionProject.model;
 
 import XDirectionProject.model.lifters.Exercise;
-import XDirectionProject.model.lifters.Lifter;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,7 +16,7 @@ import javax.persistence.*;
 public class TrainingLog {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
+    private Long id;
     @ManyToOne
     private Exercise exercise;
     private int Sets;
