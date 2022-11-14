@@ -1,15 +1,16 @@
-package model;
+package XDirectionProject.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
-@Entity
-@AllArgsConstructor
+
 @NoArgsConstructor
 @Getter
+@Setter
+@MappedSuperclass
 public abstract class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,6 +19,9 @@ public abstract class Person {
     private String firstName;
     @Column(name = "last_name", nullable = false)
     private String lastName;
+
+    @Column(name = "email", nullable = false)
+    private String email;
     @Column(name = "age", nullable = false)
     private int age;
 
